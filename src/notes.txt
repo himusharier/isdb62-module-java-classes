@@ -1,0 +1,8 @@
+color codes:
+https://www.jetbrains.com/help/clion/file-status-highlights.html#editor
+static keyword:
+https://www.javatpoint.com/static-keyword-in-java
+
+HW(08-12-2024)
+1. make calculator.
+2. page.261 -> count letter in array.
