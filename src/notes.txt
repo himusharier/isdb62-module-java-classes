@@ -2,6 +2,22 @@ color codes:
 https://www.jetbrains.com/help/clion/file-status-highlights.html#editor
 static keyword:
 https://www.javatpoint.com/static-keyword-in-java
+github badges:
+https://github.com/Thinkright20/Profile-Badges
+https://github.com/orgs/community/discussions/20481
+[
+    I followed the steps below to get the Pair Extraordinaire Badge:
+    1. Download the Github Desktop application and install it. https://desktop.github.com/
+    2. Clone one of your repositories using GH Desktop app
+    3. Create a branch
+    4. IMPORTANT: Make sure you have added a Collaborator to the repo via github.com settings collaborator menu
+    5. Make changes to your code
+    6. Before you commit the changes using the GH Desktop app add a Co-Author, this can be found just above the Commit button
+    7. Publish the changes
+    8. Create a pull request
+    9. Merge to default branch using squash and merge
+    Hope that helps someone.
+]
 
 HW(08-12-2024)
 1. make calculator.
