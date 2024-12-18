@@ -20,6 +20,11 @@ https://github.com/orgs/community/discussions/20481
 ]
 sponsor: https://github.com/orgs/community/discussions/19916
 
+#Java Tutorials:
+https://www.sanfoundry.com/
+https://www.sanfoundry.com/java-questions-answers-freshers-experienced/
+https://test.sanfoundry.com/java-programming-tests/
+
 HW(08-12-2024)
 1. make calculator.
 2. page.261 -> count letter in array.
