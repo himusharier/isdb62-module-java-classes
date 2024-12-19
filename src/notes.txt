@@ -25,6 +25,18 @@ https://www.sanfoundry.com/
 https://www.sanfoundry.com/java-questions-answers-freshers-experienced/
 https://test.sanfoundry.com/java-programming-tests/
 
+#To be investigated:
+1. consumer
+2. supplier
+3. producer
+4. function
+
+#Java OOP:
+https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/
+
 HW(08-12-2024)
 1. make calculator.
 2. page.261 -> count letter in array.
+
+HW(19-12-2024)
+1. book page 430, 11.26, a - m.
