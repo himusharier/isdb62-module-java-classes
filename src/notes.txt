@@ -40,3 +40,4 @@ HW(08-12-2024)
 
 HW(19-12-2024)
 1. book page 430, 11.26, a - m.
+2. isdb marks evaluator programme in java.
