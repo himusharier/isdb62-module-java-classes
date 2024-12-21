@@ -28,8 +28,9 @@ https://test.sanfoundry.com/java-programming-tests/
 #To be investigated:
 1. consumer
 2. supplier
-3. producer
+3. predicate
 4. function
+5. runnable
 
 #Java OOP:
 https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/
@@ -41,3 +42,6 @@ HW(08-12-2024)
 HW(19-12-2024)
 1. book page 430, 11.26, a - m.
 2. isdb marks evaluator programme in java.
+
+HW(21-12-2024)
+1. create custom exception.
