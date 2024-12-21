@@ -14,7 +14,7 @@ public class TestExtends {
 
         System.out.println(bike.run());
 
-//        Vehicle vehicle = new Vehicle();
+//        VehicleInterface vehicle = new VehicleInterface();
 //        System.out.println(vehicle.toString());
 
         Car car = new Car();

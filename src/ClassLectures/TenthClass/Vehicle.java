@@ -50,7 +50,7 @@ public abstract class Vehicle implements VehicleInterface, FauInterface {
 
     @Override
     public String toString() {
-        return "Vehicle{" +
+        return "VehicleInterface{" +
                 "engineBrand='" + engineBrand + '\'' +
                 ", seatNumber=" + seatNumber +
                 ", numberOfWheel=" + numberOfWheel +
