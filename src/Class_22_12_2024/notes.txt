@@ -44,8 +44,4 @@ HW(19-12-2024)
 2. isdb marks evaluator programme in java.
 
 HW(21-12-2024)
-1. create custom exception with own name.
-
-HW(22-12-2024)
-1. page 485 (web crawler).
-2. delete folder and file.
+1. create custom exception.
