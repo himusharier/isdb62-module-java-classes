@@ -49,3 +49,6 @@ HW(21-12-2024)
 HW(22-12-2024)
 1. page 485 (web crawler).
 2. delete folder and file.
+
+HW(23-12-2024)
+1. page 520-524 (rational class).

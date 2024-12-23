@@ -1,6 +1,8 @@
 package HomeWork;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -9,7 +11,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class WebCrawlerLinks {
+public class WebCrawlerLinks_BufferedReader {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("---------------------------------------------------------------");
@@ -19,12 +21,13 @@ public class WebCrawlerLinks {
 
         try {
             URL url = new URL(userUrl);
-            Scanner urlScanner = new Scanner(url.openStream()); //capture everything from the link
+            //Scanner urlScanner = new Scanner(url.openStream()); //capture everything from the link
+            BufferedReader urlScanner = new BufferedReader(new InputStreamReader(url.openStream())); //capture everything from the link
             StringBuilder bodyContents = new StringBuilder();
 
             boolean findBody = false;
-            while (urlScanner.hasNext()) {
-                String lines = urlScanner.nextLine();
+            String lines;
+            while ((lines = urlScanner.readLine()) != null) {
                 if (lines.contains("<body")) {
                     findBody = true;
                 }
