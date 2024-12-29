@@ -50,4 +50,8 @@ public class Admin extends User{
         scanner.close();
     }
 
+    public String toString() {
+        return name + " " + email + " " + phoneNumber + " " + "Admin";
+    }
+
 }
