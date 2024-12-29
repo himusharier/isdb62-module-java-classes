@@ -1,0 +1,50 @@
+Objectives:
+-----------
+    1. atm booth simulation.
+    2. realistic atm booth transactions.
+    3. bank service implementation.
+    4. file or database handling.
+    5. service mode, maintenance mode.
+
+Maintenance Mode:
+-----------------
+    1. feature:
+        a. add bank service.
+        b. see bank transaction history.
+        c. see bank credits and debits.
+        d. add bank credits.
+        e. see bank clients with current balance.
+        f. see client transaction history.
+
+    2. workflow:
+        a.
+
+Service Mode:
+-------------
+    1. feature:
+        a. welcome.
+        b. deposit.
+        c. withdrawal.
+        d. balance.
+        e. transfer.
+        f. mini statement.
+        g. change pin.
+        h. exit.
+
+    2. workflow:
+        a. (welcome) : welcome menu -> account number -> pin -> client menu.
+        b. (deposit) : client menu -> deposit -> amount -> {update balance} -> transaction status -> client menu.
+        c. (withdrawal) : client menu -> withdraw -> amount -> {balance check, withdraw charge} -> transaction status -> client menu.
+        d. (balance) : client menu -> balance check -> transaction status -> client menu.
+        e. (transfer) : client menu -> transfer -> account number -> amount -> {account check, balance check, transfer charge} -> transaction status -> client menu.
+        f. (mini statement) : client menu -> mini statements -> transaction status -> client menu.
+        g. (change pin) : client menu -> pin change -> current pin -> new pin -> {verify current pin, place new pin} -> transaction status -> client menu.
+        h. (exit) : client menu -> exit -> welcome menu.
+
+Object-Oriented Programming:
+----------------------------
+    1. multithreading with service mode and maintenance mode.
+    2. interface with banking class to implement required methods for different banks.
+    3. inheritance between atm booth owner bank and other banks.
+    4. file handling as database.
+    5. abstract class for

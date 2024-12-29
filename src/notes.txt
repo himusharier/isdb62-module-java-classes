@@ -35,6 +35,10 @@ https://test.sanfoundry.com/java-programming-tests/
 #Java OOP:
 https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/
 
+#SOLID Principal:
+https://www.geeksforgeeks.org/solid-principle-in-programming-understand-with-real-life-examples/
+https://www.javatpoint.com/solid-principles-java
+
 HW(08-12-2024)
 1. make calculator.
 2. page.261 -> count letter in array.

@@ -42,7 +42,7 @@ public class Database {
         return users.get(n);
     }
 
-    public void addBook(Book book) {
+    public void AddBook(Book book) {
         books.add(book);
         bookNames.add(book.getName());
     }
@@ -83,6 +83,20 @@ public class Database {
         }
         try {
             PrintWriter pw = new PrintWriter(userFile);
+            pw.print(text1);
+            pw.close();
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        }
+    }
+
+    private void saveBooks() {
+        String text1 = "";
+        for (Book book : books) {
+            text1 = text1 + book.toString2() + "<NewBook/>\n";
+        }
+        try {
+            PrintWriter pw = new PrintWriter(booksFile);
             pw.print(text1);
             pw.close();
         } catch (Exception e) {

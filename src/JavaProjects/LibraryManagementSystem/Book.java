@@ -102,4 +102,9 @@ public class Book {
     public void setBrwCopies(int brwCopies) {
         this.brwCopies = brwCopies;
     }
+
+    public String toString2() {
+        String text = name + "<N/>" + author + "<N/>" + publisher + "<N/>" + address + "<N/>" + String.valueOf(qty) + "<N/>" + String.valueOf(price) + "<N/>" + String.valueOf(brwCopies);
+        return text;
+    }
 }
