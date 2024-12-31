@@ -1,20 +1,17 @@
 Objectives:
 -----------
-    1. atm booth simulation.
     2. realistic atm booth transactions.
     3. bank service implementation.
-    4. file or database handling.
-    5. service mode, maintenance mode.
+    4. banking database handling.
+    5. atm mode, bank mode, setup mode.
 
-Maintenance Mode:
+Bank Mode:
 -----------------
     1. feature:
-        a. add bank service.
-        b. see bank transaction history.
-        c. see bank credits and debits.
-        d. add bank credits.
-        e. see bank clients with current balance.
-        f. see client transaction history.
+        b. bank transaction history.
+        e. client with current balance.
+        f. client transaction history.
+        a.
 
     2. workflow:
         a.
