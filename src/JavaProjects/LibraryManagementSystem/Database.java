@@ -45,6 +45,7 @@ public class Database {
     public void AddBook(Book book) {
         books.add(book);
         bookNames.add(book.getName());
+        saveBooks();
     }
 
     private void getUsers() {
@@ -102,6 +103,43 @@ public class Database {
         } catch (Exception e) {
             System.err.println(e.toString());
         }
+    }
+
+    private void getBooks() {
+        String text1 = "";
+        try {
+            BufferedReader br1 = new BufferedReader(new FileReader(booksFile));
+            String s1;
+            while ((s1 = br1.readLine()) != null) {
+                text1 = text1 + s1;
+            }
+            br1.close();
+        } catch (Exception e) {
+            System.err.println(e.toString());
+        }
+
+        if (!text1.matches("") || !text1.isEmpty()) {
+            String[] a1 = text1.split("<NewBook/>");
+
+            for (String s : a1) {
+                Book book = parseBook(s);
+                books.add(book);
+                bookNames.add(book.getName());
+            }
+        }
+    }
+
+    public Book parseBook(String s) {
+        String[] a = s.split("<N/>");
+        Book book = new Book();
+        book.setName(a[0]);
+        book.setAuthor(a[1]);
+        book.setPublisher(a[2]);
+        book.setAddress(a[3]);
+        book.setQty(Integer.parseInt(a[4]));
+        book.setPrice(Double.parseDouble(a[5]));
+        book.setBrwCopies(Integer.parseInt(a[6]));
+        return book;
     }
 
 }

@@ -49,6 +49,12 @@ Service Mode:
 
 Object-Oriented Programming:
 ----------------------------
-    1. interface with banking class to implement required methods for different banks.
-    2. file handling as database.
-    3. abstract class for
+    1. interface.
+    2. abstract class.
+    3. class.
+    4. encapsulation.
+    5. inheritance.
+    6. polymorphism.
+    7. abstraction.
+    8. file handling.
+    9.

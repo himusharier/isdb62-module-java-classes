@@ -5,4 +5,4 @@ Concepts: File handling, object-oriented programming (OOP), collections (e.g., A
 
 Youtube: https://www.youtube.com/playlist?list=PL-cxMmn1xXG87ak7josmprqsp3da_Ozk
 Currently: https://www.youtube.com/watch?v=U3X4x1TYHIk&list=PL-cxzMmn1xXG87ak7josmprqsp3da_Ovk&index=4&t=7s
-Duration: 9:24
+Duration: 11:35
