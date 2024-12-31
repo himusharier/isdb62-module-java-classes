@@ -51,4 +51,4 @@ Object-Oriented Programming:
 ----------------------------
     1. interface with banking class to implement required methods for different banks.
     2. file handling as database.
-    3. abstract class for
+    3. abstract class.
