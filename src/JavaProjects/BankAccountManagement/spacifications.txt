@@ -1,33 +1,22 @@
-Objectives:
------------
-    1. realistic atm booth transactions.
-    2. bank service implementation.
-    3. banking database handling.
-    4. service mode, atm mode, bank mode.
-
-Bank Mode:
------------------
-    1. feature:
-        b. bank transaction history.
-        e. client with current balance.
-        f. client transaction history.
-        a.
-
-    2. workflow:
-        a.
-
-Service Mode:
+>>Objectives:
 -------------
-    1. feature:
-        a. *welcome.
-        b. deposit.
-        c. withdrawal.
-        d. balance.
-        e. transfer.
-        f. mini statement.
-        g. change pin.
-        h. exit.
-        i. *create account.
+    1. realistic atm booth transactions.
+    2. different bank service implementation.
+    3. banking database handling (text file).
+    4. service mode, bank mode.
+
+
+>>Service Mode:
+---------------
+    1. features:
+        a. welcome greeting screen.
+        b. deposit money to only atm booth bank accounts.
+        c. withdraw money from any registered bank accounts upon applicable charges.
+        d. balance check with respective charges.
+        e. transfer money to any registered account within registered banks upon charges.
+        f. mini statement upon respective charges.
+        g. change pin with applicable charges.
+        h. exit to terminate the session.
 
     2. workflow:
         a. (welcome) : welcome menu -> account number -> pin -> client menu.
@@ -41,17 +30,21 @@ Service Mode:
         g. (change pin) : client menu -> pin change -> current pin -> new pin -> {verify current pin, place new pin}
                           -> transaction status -> client menu.
         h. (exit) : client menu -> exit -> welcome menu.
-        i. (create account) : welcome menu -> create account -> {client details} -> choose bank -> set pin
-                              -> {save in bank database, generate account number} -> {transaction status, show account number} -> welcome menu.
 
-Object-Oriented Programming:
-----------------------------
-    1. interface.
-    2. abstract class.
-    3. class.
-    4. encapsulation.
-    5. inheritance.
-    6. polymorphism.
-    7. abstraction.
-    8. file handling.
-    9.
+
+>>Bank Mode:
+------------
+    1. features:
+        a. login to respective banks.
+        b. add clients to the respective banks.
+        c. bank transaction history.
+        d. client with current balance.
+        e. client transaction history.
+
+    2. workflow:
+        a. (login) : welcome menu -> username, password -> {verify} -> bank menu.
+        b. (add client) : bank menu -> add client -> {client details} -> set pin-> {save in bank database, generate account number}
+                          -> {transaction status, show account number} -> exit -> bank menu.
+        c. (bank transactions) : bank menu -> see bank transactions -> {read database, show list} -> exit -> bank menu.
+        d. (client list) : bank menu -> client list -> {read database, show list} -> exit -> bank menu.
+        e. (client transactions) : bank menu -> client transaction history -> account number -> {show history} -> exit -> bank menu.

@@ -1,4 +1,4 @@
-package ClassWork.question_four;
+package ClassWork.document_reader;
 
 public class Webpage implements Searchable{
     @Override
