@@ -1,7 +1,6 @@
 package ClassWork.CW_02_01_2025;
 
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.LinkedList;
 
 public class LinkedListReversed {

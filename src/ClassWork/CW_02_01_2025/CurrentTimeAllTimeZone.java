@@ -2,7 +2,6 @@ package ClassWork.CW_02_01_2025;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.time.zone.ZoneRulesException;
 import java.util.TimeZone;
 
 public class CurrentTimeAllTimeZone {
