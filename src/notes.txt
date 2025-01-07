@@ -1,62 +1,71 @@
-color codes:
-https://www.jetbrains.com/help/clion/file-status-highlights.html#editor
-static keyword:
-https://www.javatpoint.com/static-keyword-in-java
-github badges:
-https://github.com/Thinkright20/Profile-Badges
-https://github.com/orgs/community/discussions/20481
-[
-    I followed the steps below to get the Pair Extraordinaire Badge:
-    1. Download the Github Desktop application and install it. https://desktop.github.com/
-    2. Clone one of your repositories using GH Desktop app
-    3. Create a branch
-    4. IMPORTANT: Make sure you have added a Collaborator to the repo via github.com settings collaborator menu
-    5. Make changes to your code
-    6. Before you commit the changes using the GH Desktop app add a Co-Author, this can be found just above the Commit button
-    7. Publish the changes
-    8. Create a pull request
-    9. Merge to default branch using squash and merge
-    Hope that helps someone.
-]
-sponsor: https://github.com/orgs/community/discussions/19916
+#color codes:
+    https://www.jetbrains.com/help/clion/file-status-highlights.html#editor
+
+#static keyword:
+    https://www.javatpoint.com/static-keyword-in-java
+
+#github badges:
+    https://github.com/Thinkright20/Profile-Badges
+    https://github.com/orgs/community/discussions/20481
+    [
+        I followed the steps below to get the Pair Extraordinaire Badge:
+        1. Download the Github Desktop application and install it. https://desktop.github.com/
+        2. Clone one of your repositories using GH Desktop app
+        3. Create a branch
+        4. IMPORTANT: Make sure you have added a Collaborator to the repo via github.com settings collaborator menu
+        5. Make changes to your code
+        6. Before you commit the changes using the GH Desktop app add a Co-Author, this can be found just above the Commit button
+        7. Publish the changes
+        8. Create a pull request
+        9. Merge to default branch using squash and merge
+        Hope that helps someone.
+    ]
+    sponsor: https://github.com/orgs/community/discussions/19916
 
 #Java Tutorials:
-https://www.sanfoundry.com/
-https://www.sanfoundry.com/java-questions-answers-freshers-experienced/
-https://test.sanfoundry.com/java-programming-tests/
+    https://www.sanfoundry.com/
+    https://www.sanfoundry.com/java-questions-answers-freshers-experienced/
+    https://test.sanfoundry.com/java-programming-tests/
 
 #To be investigated:
-1. consumer
-2. supplier
-3. predicate
-4. function
-5. runnable
+    1. consumer
+    2. supplier
+    3. predicate
+    4. function
+    5. runnable
 
 #Java OOP:
-https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/
+    https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/
 
 #SOLID Principal:
-https://www.geeksforgeeks.org/solid-principle-in-programming-understand-with-real-life-examples/
-https://www.javatpoint.com/solid-principles-java
+    https://www.geeksforgeeks.org/solid-principle-in-programming-understand-with-real-life-examples/
+    https://www.javatpoint.com/solid-principles-java
 
 #Git Client:
-1. https://www.sourcetreeapp.com/
-2. https://www.gitkraken.com/
+    1. https://www.sourcetreeapp.com/
+    2. https://www.gitkraken.com/
 
+#Parves sir github account:
+    https://github.com/nafiuzzamanparves
+
+============================================================= HomeWork -->>
 HW(08-12-2024)
-1. make calculator.
-2. page.261 -> count letter in array.
+    1. make calculator.
+    2. page.261 -> count letter in array.
 
 HW(19-12-2024)
-1. book page 430, 11.26, a - m.
-2. isdb marks evaluator programme in java.
+    1. book page 430, 11.26, a - m.
+    2. isdb marks evaluator programme in java.
 
 HW(21-12-2024)
-1. create custom exception with own name.
+    1. create custom exception with own name.
 
 HW(22-12-2024)
-1. page 485 (web crawler).
-2. delete folder and file.
+    1. page 485 (web crawler).
+    2. delete folder and file.
 
 HW(23-12-2024)
-1. page 520-524 (rational class).
+    1. page 520-524 (rational class).
+
+HW(07-01-2024)
+    1. DSA - binary tree.
