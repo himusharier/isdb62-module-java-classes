@@ -48,6 +48,11 @@
 #Parves sir github account:
     https://github.com/nafiuzzamanparves
 
+#Hack the Box (Cyber Security):
+    https://www.hackthebox.com/
+    https://account.hackthebox.com/
+    https://academy.hackthebox.com/academy-for-business
+
 ============================================================= HomeWork -->>
 HW(08-12-2024)
     1. make calculator.
@@ -69,3 +74,7 @@ HW(23-12-2024)
 
 HW(07-01-2024)
     1. DSA - binary tree.
+
+HW(08-01-2025)
+    1. binary tree removing a node.
+    2. circle, rectangular, square with exception.
