@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) throws NegativeNumberNotSupported {
         Circle circle = new Circle(3);
         Rectangle rectangle = new Rectangle(4, 5);
-        Square square = new Square(-3);
+        Square square = new Square(3);
 
         System.out.printf("%.2f\n", circle.calculateArea());
         System.out.printf("%.2f\n", rectangle.calculateArea());
