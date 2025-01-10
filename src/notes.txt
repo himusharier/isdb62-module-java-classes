@@ -72,9 +72,13 @@ HW(22-12-2024)
 HW(23-12-2024)
     1. page 520-524 (rational class).
 
-HW(07-01-2024)
+HW(07-01-2025)
     1. DSA - binary tree.
 
 HW(08-01-2025)
     1. binary tree removing a node.
     2. circle, rectangular, square with exception.
+
+HW(09-01-2024)
+    1. parse html content.
+    2. tree node deletion problem.
