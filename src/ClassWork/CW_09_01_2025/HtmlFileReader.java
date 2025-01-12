@@ -8,18 +8,21 @@ import java.util.regex.Pattern;
 
 public class HtmlFileReader {
     public static void main(String[] args) throws FileNotFoundException {
-        String url = "C:\\Users\\Java Student PC-6\\Documents\\B. M. Sharier Kabir (ID 1285464)\\1285464\\Java\\isdb62-module-java-classes\\src\\ClassWork\\CW_09_01_2025\\contentFile.html";
-        Scanner readFile = new Scanner(new File(url));
+        String fileUrl = "src\\ClassWork\\CW_09_01_2025\\contentFile.html";
+        Scanner readFile = new Scanner(new File(fileUrl));
 
         StringBuilder fileContent = new StringBuilder();
         while (readFile.hasNext()) {
-            fileContent.append(readFile.nextLine());
+            fileContent.append(readFile.nextLine().trim());
         }
 
-        String regex = "<([a-zA-Z][a-zA-Z0-9]*)[^>]*>(.*?)</\\1>";
-
+        String regex = "<(\\w+)[^>]*>([^<>]+)</\\1>";  /* "<(\\w+)[^>]*>([^<>]+)</\\1>"  <([a-zA-Z][a-zA-Z0-9]*)[^>]*>(.*?)</\\1> */
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(fileContent);
-        System.out.println(fileContent);
+        //System.out.println(fileContent);
+
+        while (matcher.find()) {
+            System.out.println(matcher.group(2));
+        }
     }
 }
