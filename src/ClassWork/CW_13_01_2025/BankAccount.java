@@ -6,7 +6,6 @@ public class BankAccount {
     private double balance;
     private double interest;
 
-
     public BankAccount(String accountNumber, String type, double balance, double interest) {
         this.accountNumber = accountNumber;
         this.type = type;
@@ -49,7 +48,7 @@ public class BankAccount {
                 '}';
     }
 
-    // getter and setter:
+    // getters and setters:
 
     public String getAccountNumber() {
         return accountNumber;

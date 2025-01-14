@@ -53,6 +53,10 @@
     https://account.hackthebox.com/
     https://academy.hackthebox.com/academy-for-business
 
+#Singleton Method Design:
+    1. https://www.geeksforgeeks.org/singleton-class-java/
+    2. https://www.javatpoint.com/singleton-class-in-java
+
 ============================================================= HomeWork -->>
 HW(08-12-2024)
     1. make calculator.
