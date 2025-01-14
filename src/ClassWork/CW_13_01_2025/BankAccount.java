@@ -23,16 +23,20 @@ public class BankAccount {
 
     public BankAccount(){}
 
-    private void deposit(double amount) {
-        //balance += amount;
+    public void deposit(double amount) {
+        balance += amount;
     }
 
-    private void withdrawal(double amount) {
+    public void withdrawal(double amount) {
 
     }
 
-    private void interest(double amount) {
+    public void interest(double amount) {
 
+    }
+
+    public String toCsv() {
+        return accountNumber + "," + type + "," + balance + "," + interest;
     }
 
     @Override
@@ -51,6 +55,10 @@ public class BankAccount {
         return accountNumber;
     }
 
+    public String getType() {
+        return type;
+    }
+
     public double getBalance() {
         return balance;
     }
@@ -63,8 +71,12 @@ public class BankAccount {
         this.accountNumber = accountNumber;
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public void setBalance(double balance) {
-        this.balance += balance;
+        this.balance = balance;
     }
 
     public void setInterest(double interest) {

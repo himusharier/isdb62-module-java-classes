@@ -8,63 +8,91 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("enter account number: ");
-        String accountNum = scanner.nextLine();
+        System.out.print("Enter your account number: ");
+        String inputAccount = scanner.nextLine();
 
-        // bank database:
-        String fileUrl = "src\\ClassWork\\CW_13_01_2025\\database.csv";
-        Scanner readFile = new Scanner(new File(fileUrl));
-        //StringBuilder fileContent = new StringBuilder();
+        // reading bank database:
+        String databaseFile = "src\\ClassWork\\CW_13_01_2025\\database.csv";
+        Scanner readingFile = new Scanner(new File(databaseFile));
 
         BankAccount bankAccount = null;
-        while (readFile.hasNext()) {
-            //System.out.println(readFile.nextLine());
-            String singleAccount = readFile.nextLine();
-            String[] accInfo = singleAccount.split(",");
-            if (accInfo[0].equals(accountNum)) {
+        while (readingFile.hasNext()) {
+            String singleAccount = readingFile.nextLine(); // getting a single account.
+            String[] accInfo = singleAccount.split(","); // splitting each element and make an array.
+
+            if (accInfo[0].equals(inputAccount)) {
+                // creating matched account constructor.
                 bankAccount = new BankAccount(accInfo[0], accInfo[1], accInfo[2], accInfo[3]);
-                //System.out.println(bankAccount.toString());
-                break;
+                break; // exit loop, no need to match further.
             }
         }
+        readingFile.close();
+
+        if (bankAccount == null) {
+            System.out.println("Account not found.");
+            System.exit(404); // Exit if no account is found.
+        }
+
         System.out.println(bankAccount.toString());
 
-
-        // options:
+        // option menu:
         System.out.println("""
                 -----------------------------
                 1. Deposit Money
                 2. Withdraw money
                 -----------------------------""");
         System.out.print("Enter menu option: ");
-        int chooseOption = scanner.nextInt();
+        int chosenOption = scanner.nextInt();
 
         // 1. deposit money:
-        switch (chooseOption) {
-            case 1:
-                System.out.print("enter amount: ");
-                int deposit = scanner.nextInt();
-                bankAccount.setBalance(deposit);
-            case 2:
-
+        switch (chosenOption) {
+            case 1: // deposit money into account.
+                System.out.print("Enter deposit amount: ");
+                int depositMoney = scanner.nextInt();
+                bankAccount.deposit(depositMoney);
+            //case 2:
         }
 
         System.out.println(bankAccount.toString());
 
-        // writing file:
-        PrintWriter printWriter = new PrintWriter(fileUrl);
-        while (readFile.hasNext()) {
-            //System.out.println(readFile.nextLine());
-            String singleAccount = readFile.nextLine();
+        // updating database file:
+        Scanner readingToWriteFile = new Scanner(new File(databaseFile));
+        //PrintWriter printWriter = new PrintWriter(databaseFile);
+        StringBuilder updatedContent = new StringBuilder();
 
-            printWriter.println(readFile.nextLine());
-
+        while (readingToWriteFile.hasNext()) {
+            String singleAccount = readingToWriteFile.nextLine();
             String[] accInfo = singleAccount.split(",");
-            if (accInfo[0].equals(accountNum)) {
-                bankAccount = new BankAccount(accInfo[0], accInfo[1], accInfo[2], accInfo[3]);
-                //System.out.println(bankAccount.toString());
-                break;
+
+            /*if (accInfo[0].equals(inputAccount)) {
+                //bankAccount = new BankAccount(accInfo[0], accInfo[1], accInfo[2], accInfo[3]);
+                String accNum = bankAccount.getAccountNumber();
+                String accType = bankAccount.getType();
+                double accBal = bankAccount.getBalance();
+                double accInt = bankAccount.getInterest();
+                printWriter.print(accNum);
+                printWriter.print(accType);
+                printWriter.print(accBal);
+                printWriter.print(accInt);
+
+                //printWriter.println("hello");
+            }*/
+            //printWriter.println(singleAccount);
+
+            if (accInfo[0].equals(inputAccount)) {
+                // Replace the current account's line with updated data.
+                updatedContent.append(bankAccount.toCsv()).append("\n");
+            } else {
+                // Append the unchanged account's data.
+                updatedContent.append(singleAccount).append("\n");
             }
+
         }
+        readingToWriteFile.close();
+
+        PrintWriter printWriter = new PrintWriter(databaseFile);
+        printWriter.print(updatedContent.toString());
+        printWriter.close();
+
     }
 }
