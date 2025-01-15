@@ -85,7 +85,7 @@ public class Main {
 
             if (accInfo[0].equals(inputAccount)) {
                 // Replace the current account's line with updated data.
-                updatedContent.append(bankAccount.toCsv()).append("\n");
+                //updatedContent.append(bankAccount.toCsv()).append("\n");
             } else {
                 // Append the unchanged account's data.
                 updatedContent.append(singleAccount).append("\n");
