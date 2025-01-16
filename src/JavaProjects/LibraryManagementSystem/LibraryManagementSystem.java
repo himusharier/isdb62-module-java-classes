@@ -1,9 +1,12 @@
 package JavaProjects.LibraryManagementSystem;
 
+import JavaProjects.LibraryManagementSystem.methods.ClearTerminal;
+
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class LibraryManagementSystem {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Scanner input = new Scanner(System.in);
         Book book = new Book();
         Member member = new Member();
@@ -14,14 +17,18 @@ public class LibraryManagementSystem {
                     
                     >> Library Management System <<
                     -------------------------------
-                    Choose an option:
+                    Main Menu:
                         1. Member Registration.
                         2. Borrow Book.
                         3. Return Book.
-                        4. Add book.
+                        4. Add Book.
+                        5. Remove Book.
                         0. Exit.
                     -------------------------------""");
+            System.out.print("Choose an option: ");
             int mainMenuOptions = input.nextInt();
+            input.nextLine(); // added to solve auto input taking problem.
+            ClearTerminal.clearTerminal();
 
             // switch for calling all the functionality.
             switch (mainMenuOptions) {
@@ -32,9 +39,19 @@ public class LibraryManagementSystem {
                             -----------------------------""");
                     System.out.print("Enter Your Name: ");
                     String userName = input.nextLine();
-                    System.out.print("Enter Member Type (Regular/Student): ");
-                    String memberType = input.nextLine();
-                    member.addNewMember(userName, memberType);
+                    System.out.println("""
+                            Member Type:
+                                1. Regular.
+                                2. Student.""");
+                    System.out.print("Choose Member Type: ");
+                    int mtype = input.nextInt();
+                    String memberType;
+                    if (mtype == 1) {
+                        memberType = "Regular";
+                    } else {
+                        memberType = "Student";
+                    }
+                    member.addNewMember(userName, memberType); // add new member.
                     break;
                 case 2:
                     break;
@@ -49,7 +66,12 @@ public class LibraryManagementSystem {
                     String bookName = input.nextLine();
                     System.out.print("Enter Author Name: ");
                     String authorName = input.nextLine();
-                    book.addBook(bookName, authorName);
+                    System.out.print("Enter Number of Copies: ");
+                    int copiesNumber = input.nextInt();
+                    book.addBook(bookName, authorName, copiesNumber); // add new book.
+                    break;
+                case 5:
+
                     break;
                 case 0:
                     System.out.println("""
@@ -58,7 +80,7 @@ public class LibraryManagementSystem {
                             ----------
                             Shutting down system...
                             """);
-                    System.exit(1000);
+                    System.exit(1000); // exiting programme.
                     break;
             }
         }

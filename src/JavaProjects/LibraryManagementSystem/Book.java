@@ -1,5 +1,9 @@
 package JavaProjects.LibraryManagementSystem;
 
+import JavaProjects.LibraryManagementSystem.methods.AddNewBookToTheDatabase;
+
+import java.io.FileNotFoundException;
+
 public class Book {
     private String title;
     private String author;
@@ -14,9 +18,12 @@ public class Book {
     }
 
     // add-book method:
-    public void addBook(String bookName, String authorName) {
+    public void addBook(String bookName, String authorName, int copiesNumber) throws FileNotFoundException {
         // read books-list file and add new book at the end with incremented book-id.
-
+        AddNewBookToTheDatabase.addNewBookToTheDatabase(bookName, authorName, copiesNumber);
+        System.out.println("""
+                >> New book added successfully!
+                ---------------------------------""");
     }
 
     // remove-book method:

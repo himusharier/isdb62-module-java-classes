@@ -1,5 +1,9 @@
 package JavaProjects.LibraryManagementSystem;
 
+import JavaProjects.LibraryManagementSystem.methods.AddNewMemberToTheDatabase;
+
+import java.io.FileNotFoundException;
+
 public class Member {
     private String name;
     private String membershipType; // regular, student
@@ -14,8 +18,12 @@ public class Member {
     }
 
     // member-registration method:
-    public void addNewMember(String userName, String membershipType) {
+    public void addNewMember(String userName, String membershipType) throws FileNotFoundException {
         // write into member-list file.
+        AddNewMemberToTheDatabase.addNewMemberToTheDatabase(userName, membershipType);
+        System.out.println("""
+                >> New member added successfully!
+                ---------------------------------""");
     }
 
     // borrow-book method:
