@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class AddNewBookToTheDatabase {
     public static void addNewBookToTheDatabase(String name, String author, int numberOfCopies) throws FileNotFoundException {
 
-        // reading members-list database:
+        // reading books-list database:
         String databaseFile = "src\\JavaProjects\\LibraryManagementSystem\\database\\books-list.csv";
         Scanner readingToWriteFile = new Scanner(new File(databaseFile));
         StringBuilder updatedBook = new StringBuilder();

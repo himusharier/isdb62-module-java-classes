@@ -21,11 +21,12 @@ public class LibraryManagementSystem {
                         1. Member Registration.
                         2. Borrow Book.
                         3. Return Book.
-                        4. Add Book.
-                        5. Remove Book.
+                        4. Search Book.
+                        5. Add Book.
+                        6. Remove Book.
                         0. Exit.
                     -------------------------------""");
-            System.out.print("Choose an option: ");
+            System.out.print("Choose an Option: ");
             int mainMenuOptions = input.nextInt();
             input.nextLine(); // added to solve auto input taking problem.
             ClearTerminal.clearTerminal();
@@ -60,6 +61,15 @@ public class LibraryManagementSystem {
                 case 4:
                     System.out.println("""
                             
+                            >> Search Book <<
+                            -----------------""");
+                    System.out.print("Enter Book Name or Author Name: ");
+                    String bookOrAuthorName = input.nextLine();
+                    book.searchBook(bookOrAuthorName);
+                    break;
+                case 5:
+                    System.out.println("""
+                            
                             >> Add New Book <<
                             ------------------""");
                     System.out.print("Enter Book Name: ");
@@ -70,10 +80,16 @@ public class LibraryManagementSystem {
                     int copiesNumber = input.nextInt();
                     book.addBook(bookName, authorName, copiesNumber); // add new book.
                     break;
-                case 5:
-
+                case 6: // remove book:
+                    System.out.println("""
+                            
+                            >> Remove Book <<
+                            -----------------""");
+                    System.out.print("Enter Book Name: ");
+                    String removeBookName = input.nextLine();
+                    book.removeBook(removeBookName);
                     break;
-                case 0:
+                case 0: // exit:
                     System.out.println("""
                             
                             >> Exit <<

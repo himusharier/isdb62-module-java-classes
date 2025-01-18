@@ -1,6 +1,9 @@
 package JavaProjects.LibraryManagementSystem;
 
 import JavaProjects.LibraryManagementSystem.methods.AddNewBookToTheDatabase;
+import JavaProjects.LibraryManagementSystem.methods.PauseTerminal;
+import JavaProjects.LibraryManagementSystem.methods.RemoveBookFromDatabase;
+import JavaProjects.LibraryManagementSystem.methods.SearchBookFromDatabase;
 
 import java.io.FileNotFoundException;
 
@@ -22,19 +25,27 @@ public class Book {
         // read books-list file and add new book at the end with incremented book-id.
         AddNewBookToTheDatabase.addNewBookToTheDatabase(bookName, authorName, copiesNumber);
         System.out.println("""
+                
                 >> New book added successfully!
                 ---------------------------------""");
+        PauseTerminal.pauseTerminal();
     }
 
     // remove-book method:
-    public void removeBook(int bookId) {
-        // read books-list, find book-id, skip this record, print others.
-
+    public void removeBook(String removeBookName) throws FileNotFoundException {
+        // read books-list, find book-name, skip this record, print others.
+        RemoveBookFromDatabase.removeBookFromDatabase(removeBookName);
+        PauseTerminal.pauseTerminal();
     }
 
     // search-book method:
-    public void searchBook(String booksOrAuthors) {
+    public void searchBook(String booksOrAuthors) throws FileNotFoundException {
         // read books-list, create arraylist, search with contains clause, if found show all names.
+        System.out.println();
+        System.out.println("SL" + "\t" + "Book Name" + "\t" + "Author Name");
+        System.out.println("---" + "\t" + "---------" + "\t" + "-----------");
+        SearchBookFromDatabase.searchBookFromDatabase(booksOrAuthors);
+        PauseTerminal.pauseTerminal();
     }
 
     // getters and setters:

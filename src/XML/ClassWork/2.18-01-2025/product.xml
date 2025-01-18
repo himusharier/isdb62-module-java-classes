@@ -1,0 +1,17 @@
+<?xml-model href="validator.xsd"?>
+<product>
+  <name>tshirt</name>
+  <description>tshirt for men</description>
+  <price>620</price>
+  <category>clothing</category>
+  <manufacturer>
+    <name>polo</name>
+    <country>bangladesh</country>
+  </manufacturer>
+  <reviews>
+    <review>
+      <rating>5</rating>
+      <comment>good product</comment>
+    </review>
+  </reviews>
+</product>
