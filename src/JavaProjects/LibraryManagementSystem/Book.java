@@ -25,7 +25,6 @@ public class Book {
         // read books-list file and add new book at the end with incremented book-id.
         AddNewBookToTheDatabase.addNewBookToTheDatabase(bookName, authorName, copiesNumber);
         System.out.println("""
-                
                 >> New book added successfully!
                 ---------------------------------""");
         PauseTerminal.pauseTerminal();
@@ -42,8 +41,8 @@ public class Book {
     public void searchBook(String booksOrAuthors) throws FileNotFoundException {
         // read books-list, create arraylist, search with contains clause, if found show all names.
         System.out.println();
-        System.out.println("SL" + "\t" + "Book Name" + "\t" + "Author Name");
-        System.out.println("---" + "\t" + "---------" + "\t" + "-----------");
+        System.out.println("SL" + "\t\t" + "Book Name" + "\t\t" + "Author Name");
+        System.out.println("---" + "\t\t" + "---------" + "\t\t" + "-----------");
         SearchBookFromDatabase.searchBookFromDatabase(booksOrAuthors);
         PauseTerminal.pauseTerminal();
     }

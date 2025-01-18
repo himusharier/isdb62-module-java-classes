@@ -35,7 +35,6 @@ public class LibraryManagementSystem {
             switch (mainMenuOptions) {
                 case 1:
                     System.out.println("""
-                            
                             >> New Member Registration <<
                             -----------------------------""");
                     System.out.print("Enter Your Name: ");
@@ -53,6 +52,7 @@ public class LibraryManagementSystem {
                         memberType = "Student";
                     }
                     member.addNewMember(userName, memberType); // add new member.
+                    ClearTerminal.clearTerminal();
                     break;
                 case 2:
                     break;
@@ -60,16 +60,15 @@ public class LibraryManagementSystem {
                     break;
                 case 4:
                     System.out.println("""
-                            
                             >> Search Book <<
                             -----------------""");
                     System.out.print("Enter Book Name or Author Name: ");
                     String bookOrAuthorName = input.nextLine();
                     book.searchBook(bookOrAuthorName);
+                    ClearTerminal.clearTerminal();
                     break;
                 case 5:
                     System.out.println("""
-                            
                             >> Add New Book <<
                             ------------------""");
                     System.out.print("Enter Book Name: ");
@@ -79,19 +78,19 @@ public class LibraryManagementSystem {
                     System.out.print("Enter Number of Copies: ");
                     int copiesNumber = input.nextInt();
                     book.addBook(bookName, authorName, copiesNumber); // add new book.
+                    ClearTerminal.clearTerminal();
                     break;
                 case 6: // remove book:
                     System.out.println("""
-                            
                             >> Remove Book <<
                             -----------------""");
                     System.out.print("Enter Book Name: ");
                     String removeBookName = input.nextLine();
                     book.removeBook(removeBookName);
+                    ClearTerminal.clearTerminal();
                     break;
                 case 0: // exit:
                     System.out.println("""
-                            
                             >> Exit <<
                             ----------
                             Shutting down system...

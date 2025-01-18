@@ -12,12 +12,13 @@ public class RemoveBookFromDatabase {
         Scanner readingToWriteFile = new Scanner(new File(databaseFile));
         StringBuilder updatedBook = new StringBuilder();
 
-        if (!SearchBookFromDatabase.searchBookFromDatabase(removeBookName).isEmpty()) {
-            while (readingToWriteFile.hasNext()) {
+        boolean searchStatus = false;
+        while (readingToWriteFile.hasNext()) {
                 String singleBook = readingToWriteFile.nextLine();
                 String[] bookInfo = singleBook.split(",");
 
                 if (bookInfo[1].equals(removeBookName)) {
+                    searchStatus = true;
                     continue;
                 } else {
                     updatedBook.append(singleBook).append("\n");
@@ -29,11 +30,14 @@ public class RemoveBookFromDatabase {
             printWriter.print(updatedBook);
             printWriter.close();
 
-            System.out.println("""
-                >> A Book Removed successfully!
-                ---------------------------------""");
-
-        }
+            if (searchStatus) {
+                System.out.println("""
+                        >> A Book Removed successfully!
+                        ---------------------------------""");
+            } else {
+                System.err.println("'" + removeBookName + "' is not found!");
+                System.out.println();
+            }
 
         readingToWriteFile.close();
     }
