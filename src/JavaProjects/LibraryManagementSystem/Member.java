@@ -23,7 +23,6 @@ public class Member {
         // write into member-list file.
         AddNewMemberToTheDatabase.addNewMemberToTheDatabase(userName, membershipType);
         System.out.println("""
-                
                 \u001B[32m>> New member added successfully!\u001B[0m
                 ---------------------------------""");
         PauseTerminal.pauseTerminal();

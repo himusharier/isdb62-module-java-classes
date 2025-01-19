@@ -33,5 +33,11 @@ public class AddNewMemberToTheDatabase {
         printWriter.print(updatedMember);
         printWriter.close();
 
+        System.out.println();
+        System.out.println("----- Member Details -----");
+        System.out.println("ID " + "\t\t: " + memberId);
+        System.out.println("Name " + "\t: " + name);
+        System.out.println("Type " + "\t: " + type);
+
     }
 }

@@ -33,5 +33,12 @@ public class AddNewBookToTheDatabase {
         printWriter.print(updatedBook);
         printWriter.close();
 
+        System.out.println();
+        System.out.println("---------- Book Details ----------");
+        System.out.println("Book ID " + "\t\t: " + bookId);
+        System.out.println("Book Name " + "\t\t: " + name);
+        System.out.println("Book Author " + "\t: " + author);
+        System.out.println("Copies " + "\t\t\t: " + numberOfCopies);
+
     }
 }

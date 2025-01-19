@@ -1,6 +1,7 @@
 package JavaProjects.LibraryManagementSystem;
 
 import JavaProjects.LibraryManagementSystem.methods.ClearTerminal;
+import JavaProjects.LibraryManagementSystem.methods.ShowBookList;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -44,12 +45,12 @@ public class LibraryManagementSystem {
                                 1. Regular.
                                 2. Student.""");
                     System.out.print("Choose Member Type: ");
-                    int mtype = input.nextInt();
+                    int memberTypeOption = input.nextInt();
                     String memberType;
-                    if (mtype == 1) {
-                        memberType = "Regular";
-                    } else {
+                    if (memberTypeOption == 2) {
                         memberType = "Student";
+                    } else {
+                        memberType = "Regular";
                     }
                     member.addNewMember(userName, memberType); // add new member.
                     ClearTerminal.clearTerminal();
@@ -71,7 +72,8 @@ public class LibraryManagementSystem {
                     System.out.println("""
                             \u001B[33m>> Search Book <<\u001B[0m
                             -----------------""");
-                    System.out.print("Enter Book Name or Author Name: ");
+                    System.out.println("Enter Book Name or Author Name (Left blank");
+                    System.out.print("will show book lists): ");
                     String bookOrAuthorName = input.nextLine();
                     book.searchBook(bookOrAuthorName);
                     ClearTerminal.clearTerminal();
@@ -93,9 +95,10 @@ public class LibraryManagementSystem {
                     System.out.println("""
                             \u001B[33m>> Remove Book <<\u001B[0m
                             -----------------""");
-                    System.out.print("Enter Book Name: ");
-                    String removeBookName = input.nextLine();
-                    book.removeBook(removeBookName);
+                    ShowBookList.showBookList();
+                    System.out.print("Enter Book ID to Remove: ");
+                    String removeBookID = input.nextLine();
+                    book.removeBook(removeBookID);
                     ClearTerminal.clearTerminal();
                     break;
                 case 0: // exit:

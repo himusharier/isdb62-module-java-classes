@@ -25,16 +25,15 @@ public class Book {
         // read books-list file and add new book at the end with incremented book-id.
         AddNewBookToTheDatabase.addNewBookToTheDatabase(bookName, authorName, copiesNumber);
         System.out.println("""
-                
                 \u001B[32m>> New book added successfully!\u001B[0m
                 ---------------------------------""");
         PauseTerminal.pauseTerminal();
     }
 
     // remove-book method:
-    public void removeBook(String removeBookName) throws FileNotFoundException {
+    public void removeBook(String removeBookID) throws FileNotFoundException {
         // read books-list, find book-name, skip this record, print others.
-        RemoveBookFromDatabase.removeBookFromDatabase(removeBookName);
+        RemoveBookFromDatabase.removeBookFromDatabase(removeBookID);
         PauseTerminal.pauseTerminal();
     }
 
@@ -42,8 +41,6 @@ public class Book {
     public void searchBook(String booksOrAuthors) throws FileNotFoundException {
         // read books-list, create arraylist, search with contains clause, if found show all names.
         System.out.println();
-        System.out.println("SL" + "\t\t" + "Book Name" + "\t\t" + "Author Name");
-        System.out.println("---" + "\t\t" + "---------" + "\t\t" + "-----------");
         SearchBookFromDatabase.searchBookFromDatabase(booksOrAuthors);
         PauseTerminal.pauseTerminal();
     }
