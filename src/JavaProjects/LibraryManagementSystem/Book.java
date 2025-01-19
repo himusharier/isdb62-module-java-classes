@@ -25,7 +25,8 @@ public class Book {
         // read books-list file and add new book at the end with incremented book-id.
         AddNewBookToTheDatabase.addNewBookToTheDatabase(bookName, authorName, copiesNumber);
         System.out.println("""
-                >> New book added successfully!
+                
+                \u001B[32m>> New book added successfully!\u001B[0m
                 ---------------------------------""");
         PauseTerminal.pauseTerminal();
     }

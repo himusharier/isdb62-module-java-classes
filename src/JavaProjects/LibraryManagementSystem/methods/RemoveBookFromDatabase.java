@@ -32,10 +32,11 @@ public class RemoveBookFromDatabase {
 
             if (searchStatus) {
                 System.out.println("""
-                        >> A Book Removed successfully!
+                        
+                        \u001B[32m>> A Book Removed successfully!\u001B[0m
                         ---------------------------------""");
             } else {
-                System.err.println("'" + removeBookName + "' is not found!");
+                System.out.println("\u001B[31mBook name '" + removeBookName + "' is not found!\u001B[0m");
                 System.out.println();
             }
 

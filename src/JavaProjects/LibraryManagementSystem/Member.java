@@ -24,14 +24,15 @@ public class Member {
         AddNewMemberToTheDatabase.addNewMemberToTheDatabase(userName, membershipType);
         System.out.println("""
                 
-                >> New member added successfully!
+                \u001B[32m>> New member added successfully!\u001B[0m
                 ---------------------------------""");
         PauseTerminal.pauseTerminal();
     }
 
     // borrow-book method:
-    public void borrowBook(int memberId, int bookId) {
+    public void borrowBook(String memberName, String bookName) {
         // assign book-id with member-id, insert into library-log
+
     }
 
     // return-book method:

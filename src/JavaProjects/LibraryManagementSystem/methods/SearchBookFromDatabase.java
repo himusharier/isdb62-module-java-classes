@@ -24,7 +24,7 @@ public class SearchBookFromDatabase {
         readingFile.close();
 
         if (foundBook.isEmpty()) {
-            System.err.println(">> '" + bookOrAuthorName + "'" + " is not found!");
+            System.out.println("\u001B[31m>> '" + bookOrAuthorName + "'" + " is not found!");
             System.out.println();
         } else {
             System.out.println(foundBook);

@@ -10,8 +10,8 @@ public class StudentMember extends Member {
 
     // override borrow-book and return-book to use borrowable value.
     @Override
-    public void borrowBook(int memberId, int bookId) {
-        super.borrowBook(memberId, bookId);
+    public void borrowBook(String memberName, String bookName) {
+        super.borrowBook(memberName, bookName);
     }
     @Override
     public void returnBook(int memberId, int bookId) {

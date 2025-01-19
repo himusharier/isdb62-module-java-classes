@@ -15,7 +15,7 @@ public class LibraryManagementSystem {
         while (true) {
             System.out.println("""
                     
-                    >> Library Management System <<
+                    \u001B[33m>> Library Management System <<\u001B[0m
                     -------------------------------
                     Main Menu:
                         1. Member Registration.
@@ -35,7 +35,7 @@ public class LibraryManagementSystem {
             switch (mainMenuOptions) {
                 case 1:
                     System.out.println("""
-                            >> New Member Registration <<
+                            \u001B[33m>> New Member Registration <<\u001B[0m
                             -----------------------------""");
                     System.out.print("Enter Your Name: ");
                     String userName = input.nextLine();
@@ -54,13 +54,22 @@ public class LibraryManagementSystem {
                     member.addNewMember(userName, memberType); // add new member.
                     ClearTerminal.clearTerminal();
                     break;
-                case 2:
+                case 2: // borrow book:
+                    System.out.println("""
+                            \u001B[33m>> Borrow A Book <<\u001B[0m
+                            -----------------""");
+                    System.out.print("Enter Your Name: ");
+                    String borrowMemberName = input.nextLine();
+                    System.out.print("Enter Book Name: ");
+                    String borrowBookName = input.nextLine();
+                    member.borrowBook(borrowMemberName, borrowBookName);
+                    ClearTerminal.clearTerminal();
                     break;
                 case 3:
                     break;
                 case 4:
                     System.out.println("""
-                            >> Search Book <<
+                            \u001B[33m>> Search Book <<\u001B[0m
                             -----------------""");
                     System.out.print("Enter Book Name or Author Name: ");
                     String bookOrAuthorName = input.nextLine();
@@ -69,7 +78,7 @@ public class LibraryManagementSystem {
                     break;
                 case 5:
                     System.out.println("""
-                            >> Add New Book <<
+                            \u001B[33m>> Add New Book <<\u001B[0m
                             ------------------""");
                     System.out.print("Enter Book Name: ");
                     String bookName = input.nextLine();
@@ -82,7 +91,7 @@ public class LibraryManagementSystem {
                     break;
                 case 6: // remove book:
                     System.out.println("""
-                            >> Remove Book <<
+                            \u001B[33m>> Remove Book <<\u001B[0m
                             -----------------""");
                     System.out.print("Enter Book Name: ");
                     String removeBookName = input.nextLine();
@@ -91,7 +100,7 @@ public class LibraryManagementSystem {
                     break;
                 case 0: // exit:
                     System.out.println("""
-                            >> Exit <<
+                            \u001B[31m>> Exit <<\u001B[0m
                             ----------
                             Shutting down system...
                             """);
