@@ -57,6 +57,9 @@
     1. https://www.geeksforgeeks.org/singleton-class-java/
     2. https://www.javatpoint.com/singleton-class-in-java
 
+#Color code for console:
+    https://www.geeksforgeeks.org/how-to-print-colored-text-in-java-console/
+
 ============================================================= HomeWork -->>
 HW(08-12-2024)
     1. make calculator.
@@ -83,6 +86,11 @@ HW(08-01-2025)
     1. binary tree removing a node.
     2. circle, rectangular, square with exception.
 
-HW(09-01-2024)
+HW(09-01-2025)
     1. parse html content.
     2. tree node deletion problem.
+
+HW(21-01-2025)
+    1. list of books
+    2. borrow books
+    3. return books

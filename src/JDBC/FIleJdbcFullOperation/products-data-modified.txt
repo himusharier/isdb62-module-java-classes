@@ -22,3 +22,27 @@ Price: 300
 Buying Date: 2020-01-03
 Selling Date: 2020-01-04
 
+ID: 1
+Name: আপেল
+Buyer: Omar
+Seller: Iqram
+Price: 100
+Buying Date: 2020-01-01
+Selling Date: 2020-01-02
+
+ID: 2
+Name: কমলা
+Buyer: Himu
+Seller: Rasel
+Price: 200
+Buying Date: 2020-01-02
+Selling Date: 2020-01-03
+
+ID: 3
+Name: কলা
+Buyer: Faysal
+Seller: Zakaria
+Price: 300
+Buying Date: 2020-01-03
+Selling Date: 2020-01-04
+

@@ -11,6 +11,7 @@ public class ReadCsvFile {
 
         int rowCount = 0;
         int columnCount = 0;
+        readingFile.nextLine(); // for skipping header.
         while (readingFile.hasNext()) {
             rowCount++;
             String singleProduct = readingFile.nextLine();
@@ -23,6 +24,7 @@ public class ReadCsvFile {
         readingFile = new Scanner(new File(databaseFile));
 
         int currentRow = 0;
+        readingFile.nextLine(); // for skipping header.
         while (readingFile.hasNext()) {
             String singleProduct = readingFile.nextLine();
             String[] productInfo = singleProduct.split(",");
