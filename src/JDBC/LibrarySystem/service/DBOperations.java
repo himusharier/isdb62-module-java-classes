@@ -103,7 +103,7 @@ public class DBOperations {
         String status = "";
         LibraryBooks book = getSingleBook(book_id);
         if (!book.isAvailable()) {
-            String sql = "UPDATE library_system SET available = 'false' WHERE book_id = ?";
+            String sql = "UPDATE library_system SET available = true WHERE book_id = ?";
             try (Connection db = getConnection(); PreparedStatement query = db.prepareStatement(sql)) {
                 query.setInt(1, book_id);
                 int respond = query.executeUpdate();

@@ -24,13 +24,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\src\JDBC\CW_20_01_2025\FIleJdbcFullOperation\products.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\src\JDBC\FIleJdbcFullOperation\products-data.csv">
           <value>
             <Attribute>
