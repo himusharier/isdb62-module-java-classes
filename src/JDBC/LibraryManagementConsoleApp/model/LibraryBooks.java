@@ -10,7 +10,17 @@ public class LibraryBooks {
     private boolean availabilityStatus;
 
     //constructor:
-    public LibraryBooks(int id, String title, String author, int yearOfPublication, int numberOfPages, double price, boolean availabilityStatus) {
+    public LibraryBooks() {
+    }
+    public LibraryBooks(
+            int id,
+            String title,
+            String author,
+            int yearOfPublication,
+            int numberOfPages,
+            double price,
+            boolean availabilityStatus
+    ) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -20,8 +30,14 @@ public class LibraryBooks {
         this.availabilityStatus = availabilityStatus;
     }
 
+    //getter:
+    public boolean getAvailabilityStatus() {
+        return availabilityStatus;
+    }
+
+    //method to print the records:
     public void libraryBooksPrint() {
-        System.out.printf("%-3s %-25s %-25s %20s %8s %8.2f %n", id, title, author, yearOfPublication, numberOfPages, price);
+        System.out.printf("%-25s %-25s %20s %8s %8.2f%n", title, author, yearOfPublication, numberOfPages, price);
     }
 
 }

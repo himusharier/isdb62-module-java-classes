@@ -1,8 +1,7 @@
 package JDBC.LibraryManagementConsoleApp;
 
 import JDBC.LibraryManagementConsoleApp.database.DBConnection;
-import JDBC.LibraryManagementConsoleApp.functions.ClearTerminal;
-import JDBC.LibraryManagementConsoleApp.functions.PauseTerminal;
+import JDBC.LibraryManagementConsoleApp.functions.TerminalHandler;
 import JDBC.LibraryManagementConsoleApp.model.LibraryBooks;
 import JDBC.LibraryManagementConsoleApp.repository.LibraryBooksRepository;
 import JDBC.LibraryManagementConsoleApp.repository.LibraryBooksRepositoryImpl;
@@ -22,9 +21,8 @@ public class NewHorizonLibrary {
 
     void mainMenu() {
         while (true) {
-            ClearTerminal.clearTerminal();
+            TerminalHandler.clearTerminal();
             System.out.println("""
-                    
                     \u001B[33m>> Welcome to New Horizon Library <<\u001B[0m
                     ------------------------------------
                     Main Menu:
@@ -35,7 +33,8 @@ public class NewHorizonLibrary {
                     ------------------------------------""");
             System.out.print("Choose an Option: ");
             int mainMenuOption = scanner.nextInt();
-            ClearTerminal.clearTerminal();
+            TerminalHandler.clearTerminal();
+            scanner.nextLine(); //dummy scanner.
             mainMenuProcessor(mainMenuOption);
         }
     }
@@ -47,33 +46,60 @@ public class NewHorizonLibrary {
                         \u001B[33m>> Our Book Collection <<\u001B[0m
                         =========================""");
                 List<LibraryBooks> bookList = libraryBooksService.getAllBooks();
-                System.out.printf("%-3s %-25s %-25s %20s %8s %8s %n", "id", "title", "author", "publication_year", "pages", "price");
+                System.out.printf("%-25s %-25s %20s %8s %8s%n", "title", "author", "publication_year", "pages", "price");
                 System.out.printf("------------------------------------------------------------------------------------------------\n");
                 for (LibraryBooks book : bookList) {
                     book.libraryBooksPrint();
                 }
-                PauseTerminal.pauseTerminal();
+                TerminalHandler.pauseTerminal();
             }
             case 2 -> {
                 System.out.println("""
-                            \u001B[33m>> Borrow Book <<\u001B[0m
-                            =================""");
-                //showing list:
-                List<LibraryBooks> bookList = libraryBooksService.getAllBooks();
-                System.out.printf("%-25s %-25s %-20s %-8s %-8s %n", "title", "author", "publication year", "pages", "price");
-                System.out.printf("------------------------------------------------------------------------------------------------\n");
-                for (LibraryBooks book : bookList) {
-                    book.libraryBooksPrint();
+                        \u001B[33m>> Borrow Book <<\u001B[0m
+                        =================
+                        (enter 'x' to show main menu)""");
+                while (true) {
+                    System.out.println();
+                    System.out.print("Enter Book Name to Borrow: ");
+                    String borrowBookName = scanner.nextLine();
+                    if (borrowBookName.equals("x")) {
+                        break;
+                    } else {
+                        libraryBooksService.borrowBook(borrowBookName);
+                        TerminalHandler.pauseTerminal();
+                    }
                 }
-                //get borrowed book:
-                System.out.print("Enter Book Name to Borrow: ");
-                String  borrowBookName = scanner.nextLine();
+            }
+            case 3 -> {
+                System.out.println("""
+                        \u001B[33m>> Return Book <<\u001B[0m
+                        =================
+                        (enter 'x' to show main menu)""");
+                while (true) {
+                    System.out.println();
+                    System.out.print("Enter Book Name to Return: ");
+                    String returnBookName = scanner.nextLine();
+                    if (returnBookName.equals("x")) {
+                        break;
+                    } else {
+                        libraryBooksService.returnBook(returnBookName);
+                        TerminalHandler.pauseTerminal();
+                    }
+                }
+            }
+            case 0 -> {
+                System.out.println("""
+                        \u001B[31m>> Exit <<\u001B[0m
+                        ==========
+                        Shutting down system...
+                        """);
+                System.exit(1000);
             }
         }
     }
 
 
-
+    // run the programme:
     public static void main(String[] args) throws SQLException {
         DBConnection dbConnection = new DBConnection();
         LibraryBooksRepository libraryBooksRepository = new LibraryBooksRepositoryImpl(dbConnection.getConnection());

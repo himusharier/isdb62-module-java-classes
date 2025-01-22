@@ -2,5 +2,6 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/JDBC/FIleJdbcFullOperation/InsertIntoDatabase.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/JDBC/LibraryManagementConsoleApp/database/database.sql" dialect="PostgreSQL" />
   </component>
 </project>
