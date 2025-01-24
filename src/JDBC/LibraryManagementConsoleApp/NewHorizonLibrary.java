@@ -8,6 +8,7 @@ import JDBC.LibraryManagementConsoleApp.repository.LibraryBooksRepositoryImpl;
 import JDBC.LibraryManagementConsoleApp.service.LibraryBooksService;
 
 import java.sql.SQLException;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,21 +22,28 @@ public class NewHorizonLibrary {
 
     void mainMenu() {
         while (true) {
-            TerminalHandler.clearTerminal();
-            System.out.println("""
-                    \u001B[33m>> Welcome to New Horizon Library <<\u001B[0m
-                    ------------------------------------
-                    Main Menu:
-                        1. List of Books.
-                        2. Borrow Book.
-                        3. Return Book.
-                        0. Exit.
-                    ------------------------------------""");
-            System.out.print("Choose an Option: ");
-            int mainMenuOption = scanner.nextInt();
-            TerminalHandler.clearTerminal();
-            scanner.nextLine(); //dummy scanner.
-            mainMenuProcessor(mainMenuOption);
+            try {
+                TerminalHandler.clearTerminal();
+                System.out.println("""
+                \u001B[33m>> Welcome to New Horizon Library <<\u001B[0m
+                ------------------------------------
+                Main Menu:
+                    1. List of Books.
+                    2. Borrow Book.
+                    3. Return Book.
+                    0. Exit.
+                ------------------------------------""");
+                System.out.print("Choose an Option: ");
+                int mainMenuOption = scanner.nextInt();
+                scanner.nextLine(); // Consume the newline character
+                TerminalHandler.clearTerminal();
+                mainMenuProcessor(mainMenuOption);
+
+            } catch (InputMismatchException e) {
+                System.out.println("\u001B[31m>> Invalid input! Please enter a number (0-3).\u001B[0m");
+                scanner.nextLine(); // Clear the invalid input
+                TerminalHandler.pauseTerminal();
+            }
         }
     }
 
@@ -43,11 +51,11 @@ public class NewHorizonLibrary {
         switch (mainMenuOption) {
             case 1 -> {
                 System.out.println("""
-                        \u001B[33m>> Our Book Collection <<\u001B[0m
+                        \u001B[33m## Our Book Collection ##\u001B[0m
                         =========================""");
                 List<LibraryBooks> bookList = libraryBooksService.getAllBooks();
                 System.out.printf("%-25s %-25s %20s %8s %8s%n", "title", "author", "publication_year", "pages", "price");
-                System.out.printf("------------------------------------------------------------------------------------------------\n");
+                System.out.printf("-------------------------------------------------------------------------------------------\n");
                 for (LibraryBooks book : bookList) {
                     book.libraryBooksPrint();
                 }
@@ -55,9 +63,9 @@ public class NewHorizonLibrary {
             }
             case 2 -> {
                 System.out.println("""
-                        \u001B[33m>> Borrow Book <<\u001B[0m
+                        \u001B[33m## Borrow Book ##\u001B[0m
                         =================
-                        (enter 'x' to show main menu)""");
+                        (Enter 'x' to show Main Menu)""");
                 while (true) {
                     System.out.println();
                     System.out.print("Enter Book Name to Borrow: ");
@@ -66,15 +74,15 @@ public class NewHorizonLibrary {
                         break;
                     } else {
                         libraryBooksService.borrowBook(borrowBookName);
-                        TerminalHandler.pauseTerminal();
+                        //TerminalHandler.pauseTerminal();
                     }
                 }
             }
             case 3 -> {
                 System.out.println("""
-                        \u001B[33m>> Return Book <<\u001B[0m
+                        \u001B[33m## Return Book ##\u001B[0m
                         =================
-                        (enter 'x' to show main menu)""");
+                        (Enter 'x' to show Main Menu)""");
                 while (true) {
                     System.out.println();
                     System.out.print("Enter Book Name to Return: ");
@@ -83,17 +91,23 @@ public class NewHorizonLibrary {
                         break;
                     } else {
                         libraryBooksService.returnBook(returnBookName);
-                        TerminalHandler.pauseTerminal();
+                        //TerminalHandler.pauseTerminal();
                     }
                 }
             }
             case 0 -> {
                 System.out.println("""
-                        \u001B[31m>> Exit <<\u001B[0m
+                        \u001B[33m## Exit ##\u001B[0m
                         ==========
-                        Shutting down system...
-                        """);
+                        \u001B[31m>> Shutting down system...\u001B[0m""");
                 System.exit(1000);
+            }
+            default -> {
+                System.out.println("""
+                        \u001B[33m## Error ##\u001B[0m
+                        ===========
+                        \u001B[31m>> Invalid option selected. Please choose a valid menu option.\u001B[0m""");
+                TerminalHandler.pauseTerminal();
             }
         }
     }

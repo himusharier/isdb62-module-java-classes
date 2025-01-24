@@ -15,7 +15,7 @@ public class TerminalHandler {
     // pause terminal and take enter-key to continue:
     public static void pauseTerminal() {
         Scanner pause = new Scanner(System.in);
-        System.out.print("\u001B[36m[Press 'enter-key' to continue...] \u001B[0m");
+        System.out.print("\u001B[36m[Press 'Enter Key' to continue...] \u001B[0m");
         String pauseEnter = pause.nextLine();
     }
 

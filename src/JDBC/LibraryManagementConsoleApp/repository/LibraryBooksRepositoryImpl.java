@@ -44,7 +44,7 @@ public class LibraryBooksRepositoryImpl implements LibraryBooksRepository {
     @Override
     public LibraryBooks fetchBookByTitle(String title) {
         LibraryBooks book = new LibraryBooks();
-        String sql = "SELECT * FROM library_books_console_app WHERE title = ?";
+        String sql = "SELECT * FROM library_books_console_app WHERE LOWER(title) = LOWER(?)";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, title);
             ResultSet resultSet = statement.executeQuery();
@@ -71,7 +71,7 @@ public class LibraryBooksRepositoryImpl implements LibraryBooksRepository {
         LibraryBooks book = fetchBookByTitle(title);
         if (book != null) {
             if (book.getAvailabilityStatus()) {
-                String sql = "UPDATE library_books_console_app SET availability = false WHERE title = ?";
+                String sql = "UPDATE library_books_console_app SET availability = false WHERE LOWER(title) = LOWER(?)";
                 try (PreparedStatement statement = connection.prepareStatement(sql)) {
                     statement.setString(1, title);
                     int rowsUpdated = statement.executeUpdate();
@@ -90,7 +90,7 @@ public class LibraryBooksRepositoryImpl implements LibraryBooksRepository {
         LibraryBooks book = fetchBookByTitle(title);
         if (book != null) {
             if (!book.getAvailabilityStatus()) {
-                String sql = "UPDATE library_books_console_app SET availability = true WHERE title = ?";
+                String sql = "UPDATE library_books_console_app SET availability = true WHERE LOWER(title) = LOWER(?)";
                 try (PreparedStatement statement = connection.prepareStatement(sql)) {
                     statement.setString(1, title);
                     int rowsUpdated = statement.executeUpdate();
