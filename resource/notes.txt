@@ -60,6 +60,13 @@
 #Color code for console:
     https://www.geeksforgeeks.org/how-to-print-colored-text-in-java-console/
 
+#Github profile for java projects:
+    https://github.com/harismuneer
+
+#Java & XML Quiz:
+    1. https://vcampusbd.com/xml
+    2. https://vcampusbd.com/java
+
 ============================================================= HomeWork -->>
 HW(08-12-2024)
     1. make calculator.
