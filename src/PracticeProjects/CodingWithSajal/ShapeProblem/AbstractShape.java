@@ -1,4 +1,4 @@
-package PracticeProjects.ShapeProblem;
+package PracticeProjects.CodingWithSajal.ShapeProblem;
 
 
 public abstract class AbstractShape {

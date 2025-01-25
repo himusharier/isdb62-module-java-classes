@@ -1,4 +1,4 @@
-package PracticeProjects.ShapeProblem;
+package PracticeProjects.CodingWithSajal.ShapeProblem;
 
 import java.util.ArrayList;
 import java.util.List;

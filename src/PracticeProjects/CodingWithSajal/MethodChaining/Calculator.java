@@ -1,4 +1,4 @@
-package PracticeProjects.MethodChaining;
+package PracticeProjects.CodingWithSajal.MethodChaining;
 
 public class Calculator {
     int value ;
