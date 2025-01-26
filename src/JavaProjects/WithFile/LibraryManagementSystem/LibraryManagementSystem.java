@@ -1,7 +1,7 @@
-package JavaProjects.LibraryManagementSystem;
+package JavaProjects.WithFile.LibraryManagementSystem;
 
-import JavaProjects.LibraryManagementSystem.methods.ClearTerminal;
-import JavaProjects.LibraryManagementSystem.methods.ShowBookList;
+import JavaProjects.WithFile.LibraryManagementSystem.methods.ClearTerminal;
+import JavaProjects.WithFile.LibraryManagementSystem.methods.ShowBookList;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;

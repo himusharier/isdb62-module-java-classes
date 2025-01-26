@@ -1,7 +1,7 @@
-package JavaProjects.LibraryManagementSystem;
+package JavaProjects.WithFile.LibraryManagementSystem;
 
-import JavaProjects.LibraryManagementSystem.methods.AddNewMemberToTheDatabase;
-import JavaProjects.LibraryManagementSystem.methods.PauseTerminal;
+import JavaProjects.WithFile.LibraryManagementSystem.methods.AddNewMemberToTheDatabase;
+import JavaProjects.WithFile.LibraryManagementSystem.methods.PauseTerminal;
 
 import java.io.FileNotFoundException;
 

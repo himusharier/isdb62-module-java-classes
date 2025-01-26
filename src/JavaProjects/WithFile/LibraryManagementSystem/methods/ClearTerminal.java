@@ -1,4 +1,4 @@
-package JavaProjects.LibraryManagementSystem.methods;
+package JavaProjects.WithFile.LibraryManagementSystem.methods;
 
 public class ClearTerminal {
     public static void clearTerminal() {

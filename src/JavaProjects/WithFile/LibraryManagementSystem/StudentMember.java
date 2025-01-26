@@ -1,4 +1,4 @@
-package JavaProjects.LibraryManagementSystem;
+package JavaProjects.WithFile.LibraryManagementSystem;
 
 public class StudentMember extends Member {
     private int borrowableBooks = 3;

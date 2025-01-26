@@ -1,9 +1,9 @@
-package JavaProjects.LibraryManagementSystem;
+package JavaProjects.WithFile.LibraryManagementSystem;
 
-import JavaProjects.LibraryManagementSystem.methods.AddNewBookToTheDatabase;
-import JavaProjects.LibraryManagementSystem.methods.PauseTerminal;
-import JavaProjects.LibraryManagementSystem.methods.RemoveBookFromDatabase;
-import JavaProjects.LibraryManagementSystem.methods.SearchBookFromDatabase;
+import JavaProjects.WithFile.LibraryManagementSystem.methods.AddNewBookToTheDatabase;
+import JavaProjects.WithFile.LibraryManagementSystem.methods.PauseTerminal;
+import JavaProjects.WithFile.LibraryManagementSystem.methods.RemoveBookFromDatabase;
+import JavaProjects.WithFile.LibraryManagementSystem.methods.SearchBookFromDatabase;
 
 import java.io.FileNotFoundException;
 

@@ -67,6 +67,9 @@
     1. https://vcampusbd.com/xml
     2. https://vcampusbd.com/java
 
+#Java project ideas:
+    1. https://www.simplilearn.com/tutorials/java-tutorial/java-projects-for-beginner
+
 ============================================================= HomeWork -->>
 HW(08-12-2024)
     1. make calculator.
