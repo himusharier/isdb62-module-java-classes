@@ -31,27 +31,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\src\JavaProjects\LibraryManagementSystem\database\books-list.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\src\JavaProjects\LibraryManagementSystem\database\library-logs.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\src\JavaProjects\LibraryManagementSystem\database\members-list.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
       </map>
     </option>
   </component>

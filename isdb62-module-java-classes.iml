@@ -10,5 +10,9 @@
     <orderEntry type="library" name="sax-2.0.1" level="project" />
     <orderEntry type="library" name="ojdbc11-23.6.0.24.10" level="project" />
     <orderEntry type="library" name="postgresql-42.7.5" level="project" />
+    <orderEntry type="library" name="okhttp-5.0.0-alpha.14" level="project" />
+    <orderEntry type="library" name="okio-jvm-3.9.0" level="project" />
+    <orderEntry type="library" name="kotlin-stdlib-1.9.23" level="project" />
+    <orderEntry type="library" name="annotations-13.0" level="project" />
   </component>
 </module>
