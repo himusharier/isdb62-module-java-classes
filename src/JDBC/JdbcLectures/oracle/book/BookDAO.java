@@ -1,7 +1,9 @@
 package JDBC.JdbcLectures.oracle.book;
 
-import Model.Book;
-import oracle.OracleConnection;
+
+import JDBC.JdbcLectures.Model.Book;
+import JDBC.JdbcLectures.oracle.OracleConnection;
+
 
 import java.sql.*;
 import java.util.ArrayList;

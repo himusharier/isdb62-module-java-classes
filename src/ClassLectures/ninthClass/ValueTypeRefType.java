@@ -1,6 +1,7 @@
 package ClassLectures.ninthClass;
 
-import tech.bisew.isdb.eighthClass.computer.Computer;
+
+import ClassLectures.eighthClass.computer.Computer;
 
 public class ValueTypeRefType {
     public static void main(String[] args) {

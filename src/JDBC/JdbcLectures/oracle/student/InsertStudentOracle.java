@@ -1,6 +1,8 @@
 package JDBC.JdbcLectures.oracle.student;
 
-import oracle.OracleConnection;
+
+
+import JDBC.JdbcLectures.oracle.OracleConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

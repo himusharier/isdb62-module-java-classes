@@ -1,8 +1,7 @@
 package JDBC.JdbcLectures;
 
-import Model.Book;
-import oracle.book.BookDAO;
-import oracle.student.SelectStudentOracle;
+import JDBC.JdbcLectures.Model.Book;
+import JDBC.JdbcLectures.oracle.book.BookDAO;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,9 @@
 package ClassLectures.fiftinthClass;
 
 
-import tech.bisew.isdb.eighthClass.computer.Computer;
+
+
+import ClassLectures.eighthClass.computer.Computer;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

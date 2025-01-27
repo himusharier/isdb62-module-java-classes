@@ -1,6 +1,8 @@
 package JDBC.JdbcLectures.postgress.student;
 
-import postgress.PostgressConnection;
+
+
+import JDBC.JdbcLectures.postgress.PostgressConnection;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
