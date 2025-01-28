@@ -1,6 +1,9 @@
 package JDBC.CW_21_01_2025;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class UpdateFruit {
     private static final String URL = "jdbc:oracle:thin:@192.168.0.219:1521/ORCLPDB";
@@ -8,23 +11,24 @@ public class UpdateFruit {
     private static final String PASSWORD = "isdb62";
 
     public static void main(String[] args) {
-        String updateSql = "DELETE FROM himu_jdbc_practice WHERE id = ?";
+        String updateSql = "UPDATE himu_jdbc_practice SET name = ? WHERE id = ?";
 
         try {
             Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
             PreparedStatement preparedStatement = connection.prepareStatement(updateSql);
 
-            preparedStatement.setString(1, "14");
+            preparedStatement.setString(1, "Himu");
+            preparedStatement.setString(2, "14");
 
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
-                System.out.println("record deleted!");
+                System.out.println("record updated!");
             } else {
-                System.out.println("no record deleted");
+                System.out.println("no record updated");
             }
 
         } catch (SQLException e) {
-            System.err.println("Error deleting data: " + e.getMessage());
+            System.err.println("Error updating data: " + e.getMessage());
         }
 
     }
