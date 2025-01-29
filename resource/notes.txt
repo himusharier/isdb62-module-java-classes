@@ -70,6 +70,14 @@
 #Java project ideas:
     1. https://www.simplilearn.com/tutorials/java-tutorial/java-projects-for-beginner
 
+#UML Doc:
+    1. https://www.geeksforgeeks.org/unified-modeling-language-uml-class-diagrams/
+    2. https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-class-diagram/
+    3. https://www.javatpoint.com/uml-class-diagram
+    4. https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/
+
+
+
 ============================================================= HomeWork -->>
 HW(08-12-2024)
     1. make calculator.
