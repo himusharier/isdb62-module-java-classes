@@ -1,0 +1,39 @@
+Here are two UML class diagram questions for you:
+
+---
+
+### **Question 1:**
+You are tasked with designing a UML class diagram for a simple **Library Management System**. The system should include the following classes and relationships:
+1. **Book**: Represents a book in the library. It has attributes like `title`, `author`, `ISBN`, and `isAvailable`.
+2. **Member**: Represents a library member. It has attributes like `memberID`, `name`, and `email`.
+3. **Loan**: Represents a book loan. It has attributes like `loanDate` and `dueDate`.
+4. **Library**: Represents the library itself. It has attributes like `name` and `address`.
+
+**Requirements:**
+- A `Member` can borrow multiple `Books`, and a `Book` can be borrowed by only one `Member` at a time.
+- A `Loan` is created when a `Member` borrows a `Book`.
+- The `Library` class manages the collection of `Books` and `Members`.
+
+**Task:**
+Draw a UML class diagram that represents the above system, including classes, attributes, methods, and relationships (associations, multiplicities, etc.).
+
+---
+
+### **Question 2:**
+You are designing a UML class diagram for an **Online Shopping System**. The system should include the following classes and relationships:
+1. **Customer**: Represents a customer. It has attributes like `customerID`, `name`, `email`, and `address`.
+2. **Order**: Represents an order placed by a customer. It has attributes like `orderID`, `orderDate`, and `totalAmount`.
+3. **Product**: Represents a product in the system. It has attributes like `productID`, `name`, `price`, and `stockQuantity`.
+4. **Payment**: Represents a payment made for an order. It has attributes like `paymentID`, `paymentDate`, and `amount`.
+
+**Requirements:**
+- A `Customer` can place multiple `Orders`, but each `Order` belongs to only one `Customer`.
+- An `Order` can include multiple `Products`, and a `Product` can be part of multiple `Orders`.
+- Each `Order` has one `Payment`, and each `Payment` is associated with only one `Order`.
+
+**Task:**
+Draw a UML class diagram that represents the above system, including classes, attributes, methods, and relationships (associations, multiplicities, etc.).
+
+---
+
+Let me know if you need further clarification or help with the diagrams!

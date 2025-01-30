@@ -70,15 +70,25 @@
 #Java project ideas:
     1. https://www.simplilearn.com/tutorials/java-tutorial/java-projects-for-beginner
 
-#UML Doc:
+#UML Doc (Diagrams):
+--------------------
+    >> Activity Diagram:
+    1. https://www.geeksforgeeks.org/unified-modeling-language-uml-activity-diagrams/
+    2. https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-activity-diagram/
+    3. https://www.javatpoint.com/uml-activity-diagram
+    4. https://www.tutorialspoint.com/uml/uml_activity_diagram.htm
+    5. https://sparxsystems.com/resources/tutorials/uml2/activity-diagram.html
+    6. https://www.mindmanager.com/en/features/activity-diagram/
+
+    >> Class Diagram:
     1. https://www.geeksforgeeks.org/unified-modeling-language-uml-class-diagrams/
     2. https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-class-diagram/
     3. https://www.javatpoint.com/uml-class-diagram
     4. https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/
-
-
+    5. https://www.tutorialspoint.com/uml/uml_class_diagram.htm
 
 ============================================================= HomeWork -->>
+
 HW(08-12-2024)
     1. make calculator.
     2. page.261 -> count letter in array.

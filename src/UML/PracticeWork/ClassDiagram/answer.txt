@@ -1,0 +1,100 @@
+Here are the answers to the UML class diagram questions:
+
+---
+
+### **Answer to Question 1: Library Management System**
+
+#### **UML Class Diagram Description:**
+1. **Classes and Attributes:**
+   - **Book**: `title`, `author`, `ISBN`, `isAvailable`
+   - **Member**: `memberID`, `name`, `email`
+   - **Loan**: `loanDate`, `dueDate`
+   - **Library**: `name`, `address`
+
+2. **Relationships:**
+   - A `Member` can borrow multiple `Books` (1-to-many relationship).
+   - A `Book` can be borrowed by only one `Member` at a time (1-to-1 relationship).
+   - A `Loan` is created when a `Member` borrows a `Book`. The `Loan` class associates `Member` and `Book`.
+   - The `Library` class manages collections of `Books` and `Members` (1-to-many relationships).
+
+3. **Multiplicities:**
+   - `Member` → `Book`: 1 (Member) to * (Books)
+   - `Book` → `Member`: 1 (Book) to 0..1 (Member)
+   - `Loan` → `Member`: 1 (Loan) to 1 (Member)
+   - `Loan` → `Book`: 1 (Loan) to 1 (Book)
+   - `Library` → `Book`: 1 (Library) to * (Books)
+   - `Library` → `Member`: 1 (Library) to * (Members)
+
+#### **Diagram Representation:**
+```
++-------------------+       +-------------------+       +-------------------+
+|      Library      |       |      Member       |       |       Book        |
++-------------------+       +-------------------+       +-------------------+
+| - name: String    |       | - memberID: String|       | - title: String   |
+| - address: String |       | - name: String    |       | - author: String  |
++-------------------+       | - email: String   |       | - ISBN: String    |
+| + addBook()       |       +-------------------+       | - isAvailable: bool|
+| + addMember()     |       | + borrowBook()    |       +-------------------+
++-------------------+       | + returnBook()    |       | + checkAvailability()|
+                            +-------------------+       +-------------------+
+                                    | 1                         | 1
+                                    | *                         | 0..1
+                                    |                           |
+                                    |       +-------------------+
+                                    +-------|       Loan        |
+                                            +-------------------+
+                                            | - loanDate: Date  |
+                                            | - dueDate: Date   |
+                                            +-------------------+
+```
+
+---
+
+### **Answer to Question 2: Online Shopping System**
+
+#### **UML Class Diagram Description:**
+1. **Classes and Attributes:**
+   - **Customer**: `customerID`, `name`, `email`, `address`
+   - **Order**: `orderID`, `orderDate`, `totalAmount`
+   - **Product**: `productID`, `name`, `price`, `stockQuantity`
+   - **Payment**: `paymentID`, `paymentDate`, `amount`
+
+2. **Relationships:**
+   - A `Customer` can place multiple `Orders` (1-to-many relationship).
+   - An `Order` can include multiple `Products`, and a `Product` can be part of multiple `Orders` (many-to-many relationship).
+   - Each `Order` has one `Payment`, and each `Payment` is associated with only one `Order` (1-to-1 relationship).
+
+3. **Multiplicities:**
+   - `Customer` → `Order`: 1 (Customer) to * (Orders)
+   - `Order` → `Product`: * (Orders) to * (Products)
+   - `Order` → `Payment`: 1 (Order) to 1 (Payment)
+
+#### **Diagram Representation:**
+```
++-------------------+       +-------------------+       +-------------------+
+|     Customer      |       |       Order       |       |      Product      |
++-------------------+       +-------------------+       +-------------------+
+| - customerID: String|     | - orderID: String |       | - productID: String|
+| - name: String    |       | - orderDate: Date |       | - name: String    |
+| - email: String   |       | - totalAmount: double|    | - price: double   |
+| - address: String |       +-------------------+       | - stockQuantity: int|
++-------------------+       | + calculateTotal()|       +-------------------+
+| + placeOrder()    |       +-------------------+       | + updateStock()   |
++-------------------+               | 1                 +-------------------+
+        | 1                         | *                         | *
+        | *                         |                           |
+        |                           |       +-------------------+
+        |                           +-------|      Payment      |
+        |                                   +-------------------+
+        |                                   | - paymentID: String|
+        |                                   | - paymentDate: Date|
+        |                                   | - amount: double   |
+        |                                   +-------------------+
+        |                                           | 1
+        |                                           |
+        +-------------------------------------------+
+```
+
+---
+
+Let me know if you need further clarification or help!
